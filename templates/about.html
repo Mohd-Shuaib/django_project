@@ -1,0 +1,137 @@
+{% include 'header.html' %}
+{% block title %}About{% endblock title %}
+
+{% block body %}
+{% load static %}
+<div class="page-title-area">
+<div class="d-table">
+<div class="d-table-cell">
+<div class="container">
+<div class="title-item">
+<h2>About</h2>
+<ul>
+<li>
+<a href="./">Home</a>
+</li>
+<li>
+<span>/</span>
+</li>
+<li>
+ About Us
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="about-area ptb-100">
+    <div class="container">
+    <div class="row align-iems-center">
+    <div class="col-lg-6">
+    <div class="section-title">
+    <span class="sub-title">{{hometext2.about_subtitle1}}</span>
+    <h2>{{hometext2.about_subtitle2}} </h2>
+    </div>
+    <div class="about-content">
+    <p>{{hometext2.about_para1}}</p>
+    <p>{{hometext2.about_para2}}</p>
+    <div class="section-title">
+    <span class="sub-title" style="color: #000;">{{hometext2.about_subtitle3}}</span>
+    <p>{{hometext2.about_para3}} </p>
+    <p>{{hometext2.about_para4}}</p>
+    
+    </div>
+    
+    
+    
+    </div>
+    </div>
+    <div class="col-lg-6">
+    <div class="about-img-wrap">
+    <div class="about-img-slider owl-theme owl-carousel">
+    <div class="about-img-item">
+    <img src="/media/{{hometext2.about_img1}}" alt="About">
+    </div>
+    <div class="about-img-item">
+     <img src="/media/{{hometext2.about_img2}}" alt="About">
+     </div>
+     <div class="about-img-item">
+    <img src="/media/{{hometext2.about_img3}}" alt="About">
+    </div>
+    <div class="about-img-item">
+     <img src="/media/{{hometext2.about_img4}}" alt="About">
+    </div>
+
+
+    
+
+    </div>
+    <div class="about-shape">
+    <img src="{% static 'img/home-one/about2.png' %}" alt="About">
+    <img src="{% static 'img/home-one/about3.jpg' %}" alt="About">
+    <img src="{% static 'img/home-one/about4.png' %}" alt="About">
+    <img src="{% static 'img/home-one/about5.png' %}" alt="About">
+    </div>
+    <div class="about-year">
+    <h2>{{hometext2.about_years}} <span>Years</span></h2>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+{% comment %} <div class="job-area job-area-two job-area-three">
+<div class="container-fluid">
+<div class="row m-0">
+<div class="col-lg-6">
+<div class="job-img">
+ <img src="assets/img/about-job-main.jpg" alt="Job">
+</div>
+</div>
+<div class="col-lg-6">
+<div class="job-content">
+<div class="section-title">
+<h2>Enhancing, Not Replacing, Human Jobs</h2>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+<ul>
+<li>
+<i class='bx bx-check'></i>
+Higher Revenue
+</li>
+<li>
+<i class='bx bx-check'></i>
+Improved Monitoring
+</li>
+<li>
+<i class='bx bx-check'></i>
+Lower Cost
+</li>
+<li>
+<i class='bx bx-check'></i>
+Fast Implementation
+</li>
+<li>
+<i class='bx bx-check'></i>
+Greater Efficiency
+</li>
+<li>
+<i class='bx bx-check'></i>
+Better Safety
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% endblock body %}
+{% include 'footer.html' %}

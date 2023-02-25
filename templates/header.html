@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  {% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href=" {% static 'css/meanmenu.css' %}">
+<link rel="stylesheet" href=" {% static 'css/meanmenu.css' %}">
+<link rel="stylesheet" href=" {% static 'css/boxicons.min.css' %}">
+<link rel="stylesheet" href=" {% static 'fonts/flaticon.css' %}">
+<link rel="stylesheet" href=" {% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href=" {% static 'css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href=" {% static 'css/odometer.min.css' %}">
+<link rel="stylesheet" href=" {% static 'css/magnific-popup.min.css' %}">
+<link rel="stylesheet" href=" {% static 'css/style.css' %}">
+<link rel="stylesheet" href=" {% static 'css/responsive.css' %}">
+
+<title>{% block title %}{% endblock title %} | VMS A Complete Solution</title>
+
+</head>
+
+<body>
+
+{% comment %} <div class="loader">
+<div class="d-table">
+<div class="d-table-cell">
+<div class="spinner"></div>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+<div class="header-top-area">
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+<div class="header-top-item">
+<div class="header-left">
+
+<ul>
+<li>
+<i class="flaticon-factory"></i>
+<a href="#">
+{{hometext8.info}}
+</a>
+</li>
+<li>
+<i class="flaticon-mail"></i>
+<a href="mailto:{{hometext8.email}}">
+<span class="__cf_email__">{{hometext8.email}}</span>
+</a>
+</li>
+<li>
+<i class="flaticon-phone"></i>
+<a href="tel:{{hometext8.num1}}">
+  {{hometext8.num1}}
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="header-top-item">
+<div class="header-right">
+{% if hometext8.social_icons %}
+<ul>
+<li>
+<a href="https://www.facebook.com/vital.medicalsystem7505" target="_blank">
+<i class='bx bxl-facebook'></i>
+</a>
+</li>
+<li>
+<a href="https://twitter.com/VITALMEDICALSY2" target="_blank">
+<i class='bx bxl-twitter'></i>
+</a>
+</li>
+<li>
+<a href="#" target="_blank">
+<i class='bx bxl-whatsapp'></i>
+</a>
+</li>
+<li>
+<a href="https://www.instagram.com/vms7505/" target="_blank">
+  <i class='bx bxl-instagram-alt'></i>
+</a>
+</li>
+
+
+</ul>
+{% endif %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="navbar-area sticky-top">
+
+<div class="mobile-nav">
+<a href="./" class="logo">
+<img src="/static/img/logo-three.png" alt="Logo">
+</a>
+</div>
+
+<div class="main-nav">
+<div class="container">
+<nav class="navbar navbar-expand-md navbar-light">
+<a class="navbar-brand" href="./">
+<img src="{% static 'img/logo.png' %}" alt="Logo">
+</a>
+<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+
+<ul class="navbar-nav">
+
+
+{% for navbar_item in hometext9 %} 
+<li class="nav-item">
+  <a href="{{ navbar_item.url }}" class="nav-link {% if forloop.counter0 == 0 %}active{% endif %}">{{ navbar_item.title }}</a>
+  </li>
+{% endfor %}
+
+</ul>
+
+
+<div class="side-nav">
+<a href="/contact">Enquiry</a>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+
+

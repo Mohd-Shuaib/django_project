@@ -1,0 +1,64 @@
+{% include 'header.html' %}
+{% block title %}Products{% endblock title %}
+{% block body %}
+
+<div class="page-title-area">
+    <div class="d-table">
+    <div class="d-table-cell">
+    <div class="container">
+    <div class="title-item">
+    <h2>Products</h2>
+    <ul>
+    <li>
+    <a href="./">Home</a>
+    </li>
+    <li>
+    <span>/</span>
+    </li>
+    <li>
+        Our Products
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <section class="offer-area offer-area-four pt-100 pb-70">
+        <div class="container">
+        
+        <div class="section-title">
+        <span class="sub-title">Products</span>
+        <h2>Our Products</h2>
+        </div>
+        
+        <div class="row">
+        {% for i in hometext3 %}
+        <div class="col-sm-6 col-lg-4">
+        <div class="offer-item">
+        <div class="offer-top">
+        <img src="/media/{{i.product_image}}" alt="Offer">
+        <i class="flaticon-3d-print"></i>
+        </div>
+        <div class="offer-bottom">
+        <h3>
+        <a href="#">{{i.product_name}}</a>
+        </h3>
+        <p>{{i.product_dec}}</p>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+    
+        
+        </div>
+        
+     
+        </div>
+        </section>
+    
+    
+
+{% endblock body %}
+{% include 'footer.html' %}

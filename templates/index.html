@@ -1,0 +1,307 @@
+{% include 'header.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+{% load static %}
+<div class="banner-area banner-img-one">
+    <div class="d-table">
+    <div class="d-table-cell">
+    <div class="container">
+        
+    <div class="banner-content">
+    
+    <h1>{{hometext1.top_name}}</h1>
+ 
+    <p>{{hometext1.top_dec}}</p>
+    <a class="cmn-btn" href="about.html">
+    {{hometext1.top_btn}}
+    <i class='bx bx-right-arrow-alt'></i>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <section class="about-area ptb-100">
+    <div class="container">
+    <div class="row align-iems-center">
+    <div class="col-lg-6">
+    <div class="section-title">
+    <span class="sub-title">{{hometext2.about_subtitle1}}</span>
+    <h2>{{hometext2.about_subtitle2}} </h2>
+    </div>
+    <div class="about-content">
+    <p>{{hometext2.about_para1}}</p>
+    <p>{{hometext2.about_para2}}</p>
+    <div class="section-title">
+    <span class="sub-title" style="color: #000;">{{hometext2.about_subtitle3}}</span>
+    <p>{{hometext2.about_para3}} </p>
+    <p>{{hometext2.about_para4}}</p>
+    
+    </div>
+    
+    
+    
+    </div>
+    </div>
+    <div class="col-lg-6">
+    <div class="about-img-wrap">
+    <div class="about-img-slider owl-theme owl-carousel">
+    <div class="about-img-item">
+    <img src="/media/{{hometext2.about_img1}}" alt="About">
+    </div>
+    <div class="about-img-item">
+     <img src="/media/{{hometext2.about_img2}}" alt="About">
+     </div>
+     <div class="about-img-item">
+    <img src="/media/{{hometext2.about_img3}}" alt="About">
+    </div>
+    <div class="about-img-item">
+     <img src="/media/{{hometext2.about_img4}}" alt="About">
+    </div>
+
+
+    
+
+    </div>
+    <div class="about-shape">
+    <img src="{% static 'img/home-one/about2.png' %}" alt="About">
+    <img src="{% static 'img/home-one/about3.jpg' %}" alt="About">
+    <img src="{% static 'img/home-one/about4.png' %}" alt="About">
+    <img src="{% static 'img/home-one/about5.png' %}" alt="About">
+    </div>
+    <div class="about-year">
+    <h2>{{hometext2.about_years}} <span>Years</span></h2>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <section class="offer-area offer-area-four pt-100 pb-70">
+    <div class="container">
+    
+    <div class="section-title">
+    <span class="sub-title">{{hometext10.sub_title}}</span>
+    <h2>{{hometext10.title}}</h2>
+    </div>
+    
+    <div class="row">
+    {% for i in hometext3|slice:"0:3"  %}
+    <div class="col-sm-6 col-lg-4">
+    <div class="offer-item">
+    <div class="offer-top">
+    <img src="/media/{{i.product_image}}" alt="Offer">
+    <i class="flaticon-3d-print"></i>
+    </div>
+    <div class="offer-bottom">
+    <h3>
+    <a href="#">{{i.product_name}}</a>
+    </h3>
+    <p>{{i.product_dec}}</p>
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+
+    
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="know-more">
+                <a class="cmn-btn" href="/products">View More <i class="bx bx-right-arrow-alt"></i>
+    </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <div class="foreign-area ptb-100">
+        <div class="container">
+            <div class="section-title">
+        <span class="sub-title">{{hometext11.sub_title}}</span>
+        <h2>{{hometext11.title}}</h2>
+        </div>
+        <div class="foreign-slider owl-theme owl-carousel">
+        {% for i in hometext4 %}
+        <div class="foreign-item">
+        <a href="#">
+        <img src="/media/{{i.exhibition_image}}" alt="Foreign">
+        </a>
+        </div>
+        {% endfor %}
+      
+        </div>
+        </div>
+        </div>
+    
+    
+    
+    <section class="counter-area pt-70 pb-70">
+    <div class="container">
+    <div class="row align-iems-center">
+    <div class="col-lg-5">
+    <div class="counter-text">
+    <h2>We have Completed Some Foreign Clients Project</h2>
+    </div>
+    </div>
+    <div class="col-lg-7">
+    <div class="row">
+    <div class="col-sm-4 col-lg-4">
+    <div class="counter-item">
+    <h3>
+    <span class="odometer" data-count="1226">00</span>
+    </h3>
+    <p>HAPPY CLIENTS</p>
+    </div>
+    </div>
+    <div class="col-sm-4 col-lg-4">
+    <div class="counter-item">
+    <h3>
+    <span class="odometer" data-count="1552">00</span>
+    </h3>
+    <p>WORKERS</p>
+    </div>
+    </div>
+    <div class="col-sm-4 col-lg-4">
+    <div class="counter-item">
+    <h3>
+    <span class="odometer" data-count="1000">00</span>
+    </h3>
+    <p>EXPERT</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+    <section class="team-area ptb-100">
+        <div class="container">
+        <div class="section-title">
+        <span class="sub-title">{{hometext12.sub_title}}</span>
+        <h2>{{hometext12.title}}</h2>
+        </div>
+        <div class="row">
+    
+        
+        
+        
+        {%for team in hometext5 %}
+        <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-3">
+        <div class="team-item">
+        <img src="/media/{{team.image}}" alt="Team">
+        <h3>{{team.name}}</h3>
+        <span>{{team.designation}}</span>
+        {% if team.social_icons %}
+        <ul>
+        <li>
+        <a href="#" target="_blank">
+        <i class='bx bxl-facebook'></i>
+        </a>
+        </li>
+        <li>
+        <a href="#" target="_blank">
+        <i class='bx bxl-twitter'></i>
+        </a>
+        </li>
+        <li>
+        <a href="#" target="_blank">
+        <i class='bx bxl-pinterest-alt'></i>
+        </a>
+        </li>
+        <li>
+        <a href="#" target="_blank">
+        <i class='bx bxl-linkedin'></i>
+        </a>
+        </li>
+        </ul>
+        {% endif %}
+
+        </div>
+        </div>
+        {% endfor %}
+        
+        </div>
+        </div>
+        </section>
+    
+    
+    
+    
+        <section class="testimonial-area ptb-100">
+            <div class="testimonial-shape">
+            <img src="{% static 'img/home-two/testimonial-bg.png' %}" alt="Testimonial">
+            </div>
+        
+            <div class="container">
+        
+            <div class="section-title">
+            <span class="sub-title">{{hometext13.sub_title}}</span>
+            <h2>{{hometext13.title}}y</h2>
+            </div>
+        
+            <div class="testimonial-slider owl-theme owl-carousel">
+            {% for testi in hometext6%}  
+            <div class="testimonial-item">
+            <div class="testimonial-top">
+             <i class="flaticon-right-quotation-sign"></i>
+            <p>{{testi.dec}}</p>
+            </div>
+            <ul class="align-items-center">
+            <li>
+            <img src="/media/{{testi.image}}" alt="Testimonial">
+            </li>
+            <li>
+            <h4>{{testi.name}}</h4>
+            <span>{{testi.designation}}</span>
+            </li>
+            </ul>
+            </div>
+            {% endfor %}
+            
+        
+            </div>
+        
+        
+            </div>
+            </section>
+            
+    
+    
+            <div class="logo-area pt-100 pb-70">
+                <div class="container">
+                    <div class="section-title">
+                <span class="sub-title">{{hometext14.sub_title}}</span>
+                <h2>{{hometext14.title}}</h2>
+                </div>
+                <div class="row">
+                 {% for partner in hometext7%}
+                <div class="col-6 col-lg-5">
+                <div class="logo-item">
+                <img src="/media/{{partner.image}}" alt="Logo">
+                </div>
+                </div>
+                {% endfor %}
+            
+            
+                </div>
+                </div>
+                </div>
+    
+    
+
+{% endblock body %}
+
+{% include 'footer.html' %}

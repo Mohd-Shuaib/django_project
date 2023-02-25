@@ -1,0 +1,120 @@
+{% include 'header.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+
+<div class="page-title-area">
+    <div class="d-table">
+    <div class="d-table-cell">
+    <div class="container">
+    <div class="title-item">
+    <h2>Contact</h2>
+    <ul>
+    <li>
+    <a href="./">Home</a>
+    </li>
+    <li>
+    <span>/</span>
+    </li>
+    <li>
+     Contact Us
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    {% for message in messages  %}            
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      <strong>Message : </strong> {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}    
+    
+    <section class="contact-area pt-100 pb-70">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-6">
+    <div class="contact-item contact-left">
+    <h3>{{contactinfo.title}}</h3>
+    <p>{{contactinfo.dec}}</p>
+    <ul>
+    <li>
+    <i class='bx bx-location-plus'></i>
+    {{contactinfo.address}}
+    </li>
+    <li>
+    <i class='bx bx-mail-send'></i>
+    <a href="mailto:{{contactinfo.email}}">
+    <span class="__cf_email__">{{contactinfo.email}}</span>
+    </a>
+    </li>
+    <li>
+    <i class='bx bx-phone-call'></i>
+    <a href="tel:{{contactinfo.num1}}">{{contactinfo.num1}}</a>, <a href="tel:{{contactinfo.num2}}">{{contactinfo.num2}}</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="col-lg-6">
+    <div class="contact-item contact-right">
+    <h3>Get In Touch</h3>
+    <form id="contactForm"  action="/contact" method="post">
+        {% csrf_token %}
+    <div class="row">
+    <div class="col-sm-6 col-lg-6">
+    <div class="form-group">
+    <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Name">
+    <div class="help-block with-errors"></div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-lg-6">
+    <div class="form-group">
+    <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
+    <div class="help-block with-errors"></div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-lg-6">
+    <div class="form-group">
+    <input type="text" name="phone" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
+    <div class="help-block with-errors"></div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-lg-6">
+    <div class="form-group">
+    <input type="text" name="subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Subject">
+    <div class="help-block with-errors"></div>
+    </div>
+    </div>
+    <div class="col-md-12 col-lg-12">
+    <div class="form-group">
+    <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Message"></textarea>
+    <div class="help-block with-errors"></div>
+    </div>
+    </div>
+    <div class="col-md-12 col-lg-12">
+    <button type="submit" class="contact-btn btn">
+    Send Message
+    </button>
+    <div id="msgSubmit" class="h3 text-center hidden"></div>
+    <div class="clearfix"></div>
+    </div>
+    </div>
+    
+    
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <div class="map-area">
+    <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?ll=28.5449756,77.1904397&q=Indian Institute of Technology Delhi&t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://techwithlove.com/how-to-know-who-viewed-my-whatsapp-profile/">TechWithLove</a></div><style>.mapouter{position:relative;text-align:right;height:400px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}</style></div>
+    </div>
+
+{% endblock body %}
+{% include 'footer.html' %}
