@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1@8o6n!kj(le9^e6*0o1px-%6pgrhmueexano4iu%9syt(1_zi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'vms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates",],
+        'DIRS': os.path.join(BASE_DIR, "templates"),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'vms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -125,7 +125,7 @@ MESSAGE_TAGS = {
 }
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, "static"),
     
 ]
 #Managing media
